@@ -8,7 +8,7 @@
     --dark-purple: hsl(273, 85%, 13%);
     --bright-green: hsl(150, 100%, 63%);
     --greyish: hsl(271, 12%, 34%);
-    --light-purple: hsl(276, 100%, 99%);
+    --light-purple: hsl(276, 100%, 95%);
 }
 
 html {
@@ -124,6 +124,27 @@ img[alt="phone"] {
     fill: var(--dark-purple);
 }
 
+.info-section-wave {
+    position: relative;
+    /* top: 100%; */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: white;
+}
+
+.info-section-wave svg {
+    position: relative;
+    display: block;
+    width: calc(286% + 1.3px);
+    height: 234px;
+}
+
+.info-section-wave .shape-fill {
+    fill: var(--light-purple);
+}
+
 main {
     position: relative;
     top: 354px;
@@ -135,13 +156,13 @@ section.info-section {
     background-color: var(--light-purple);
 }
 
-.info-section .hero-wave {
+/* .info-section .hero-wave {
     background-color: white;
 }
 
 .info-section .hero-wave .shape-fill {
     fill: var(--light-purple);
-}
+} */
 
 .info-list {
     width: 90%;
@@ -167,16 +188,12 @@ section.info-section {
 }
 
 .creator-section {
-    position: relative;
-    top: 237px;
+    display: grid;
+    /* position: relative; */
     width: 90%;
     max-width: 1115px;
     margin: auto;
-}
-
-
-.creator-section {
-    display: grid;
+    height: 600px;
 }
 
 img[alt="founder"] {
@@ -227,6 +244,12 @@ img[alt="founder"] {
     background-color: var(--dark-purple);
 }
 
+footer {
+    position: relative;
+    top: 354px;
+    background-color: white;
+}
+
 @media only screen and (max-width: 855px) {
 
     img[alt="phone"] {
@@ -255,6 +278,9 @@ img[alt="founder"] {
         background-position: 90% 350%;
     }
 
+    .creator-section {
+        height: 500px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -294,6 +320,10 @@ img[alt="founder"] {
         padding: 1.5rem;
         width: 80%;
     }
+
+    .creator-section {
+        height: 400px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -313,6 +343,10 @@ img[alt="founder"] {
         width: 100%;
         top: -50px;
         background-image: none;
+    }
+
+    .creator-section {
+        height: 600px;
     }
 }
 
@@ -348,5 +382,9 @@ img[alt="founder"] {
     .info-card>.card-info {
         text-align: center;
         grid-area: initial;
+    }
+
+    .creator-section {
+        height: 475px;
     }
 }
