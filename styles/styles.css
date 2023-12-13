@@ -13,6 +13,7 @@
 
 html {
     box-sizing: border-box;
+    background-color: white;
 }
 
 *,
@@ -67,14 +68,27 @@ nav ul {
     justify-content: space-around;
 }
 
+.navbar__link {
+    cursor: pointer;
+}
+
+.navbar__link:hover {
+    color: var(--bright-green);
+    border-bottom: 3px solid var(--bright-green);
+}
+
 .hero-content {
     margin: 3rem auto 2rem auto;
+}
+
+.highlighted-word {
+    text-decoration: underline solid var(--bright-green) 5px;
 }
 
 .hero-content h1 {
     width: 12ch;
     font-size: 5rem;
-    line-height: 0.8em;
+    line-height: 1em;
     text-align: center;
     margin: auto auto 1.75rem auto;
 }
@@ -250,6 +264,19 @@ footer {
     background-color: white;
 }
 
+img[alt="dark-logo"] {
+    display: block;
+    margin: auto;
+}
+
+.sm-logos {
+    width: max-content;
+    margin: 2rem auto auto auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 @media only screen and (max-width: 855px) {
 
     img[alt="phone"] {
@@ -266,7 +293,7 @@ footer {
         background-position: -12% 45%, 108% 100%;
     }
 
-    body {
+    html {
         background-color: white;
     }
 
